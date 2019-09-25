@@ -13,6 +13,7 @@ public class SimpleArraySum {
 		for (int i = 0; i < tam; i++) {
 			total += scan.nextInt();
 		}
+		scan.close();
 
 		System.out.println(total);
 	}

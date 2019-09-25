@@ -13,6 +13,7 @@ public class AVeryBigSum {
 		for (int i = 0; i < n; i++) {
 			sum += Long.valueOf(in.nextInt());
 		}
+		in.close();
 		System.out.println(sum);
 	}
 }

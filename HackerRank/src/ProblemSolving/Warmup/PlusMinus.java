@@ -20,6 +20,7 @@ public class PlusMinus {
 			else
 				zero++;
 		}
+		scan.close();
 
 		System.out.printf("%.6f", Double.valueOf(pos) / Double.valueOf(num));
 		System.out.println();

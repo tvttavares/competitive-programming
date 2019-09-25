@@ -23,6 +23,7 @@ public class DiagonalDifference {
 					sd += matriz[i][j];
 			}
 		}
+		scan.close();
 		System.out.println(Math.abs((pd - sd)));
 	}
 }

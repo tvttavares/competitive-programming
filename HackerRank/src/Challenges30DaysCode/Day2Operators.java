@@ -11,9 +11,9 @@ public class Day2Operators {
 		double mc = scan.nextDouble();
 		int tip = scan.nextInt();
 		int tax = scan.nextInt();
+		scan.close();
 
 		System.out.println((int) Math.round(mc + mc * tip / 100 + mc * tax / 100));
 
 	}
-
 }
