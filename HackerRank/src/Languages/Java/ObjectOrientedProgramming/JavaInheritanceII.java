@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming;
+package Languages.Java.ObjectOrientedProgramming;
 
 class Arithmetic {
 	int add(int a, int b) {

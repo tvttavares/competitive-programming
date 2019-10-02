@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming;
+package Languages.Java.ObjectOrientedProgramming;
 
 class Animal {
 	void walk() {
