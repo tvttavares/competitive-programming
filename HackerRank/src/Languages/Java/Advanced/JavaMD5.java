@@ -1,21 +1,34 @@
 package Languages.Java.Advanced;
 
-import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 public class JavaMD5 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		System.out.println(getMD5(s));
+		sc.close();
+	}
 
-	public static void main(String[] args) throws NoSuchAlgorithmException {
-		Scanner scan = new Scanner(System.in);
-		String s = scan.nextLine();
-		scan.close();
+	private static String getMD5(String s) {
+		StringBuffer sb = new StringBuffer();
+		try {
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			byte[] result = md.digest(s.getBytes());
+			for (int i = 0; i < result.length; i++) {
+				String hex = Integer.toHexString(0xff & result[i]);
+				if (hex.length() == 1)
+					sb.append('0');
+				sb.append(hex);
 
-		MessageDigest m = MessageDigest.getInstance("MD5");
-		m.update(s.getBytes(), 0, s.length());
-		System.out.println(new BigInteger(1, m.digest()).toString(16));
+			}
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
 
+		return sb.toString();
 	}
 
 }
