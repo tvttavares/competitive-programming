@@ -1,0 +1,70 @@
+package Challenges30DaysCode;
+
+import java.util.Scanner;
+
+class Nodee {
+	int data;
+	Nodee next;
+
+	Nodee(int d) {
+		data = d;
+		next = null;
+	}
+
+}
+
+public class Day24MoreLinkedLists {
+
+	public static Nodee removeDuplicates(Nodee head) {
+		if (head == null) {
+			return null;
+		}
+		Nodee n = head;
+		while (n.next != null) {
+			if (n.data == n.next.data) {
+				n.next = n.next.next;
+			} else {
+				n = n.next;
+			}
+		}
+		return head;
+
+	}
+
+	public static Nodee insert(Nodee head, int data) {
+		Nodee p = new Nodee(data);
+		if (head == null)
+			head = p;
+		else if (head.next == null)
+			head.next = p;
+		else {
+			Nodee start = head;
+			while (start.next != null)
+				start = start.next;
+			start.next = p;
+
+		}
+		return head;
+	}
+
+	public static void display(Nodee head) {
+		Nodee start = head;
+		while (start != null) {
+			System.out.print(start.data + " ");
+			start = start.next;
+		}
+	}
+
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		Nodee head = null;
+		int T = sc.nextInt();
+		while (T-- > 0) {
+			int ele = sc.nextInt();
+			head = insert(head, ele);
+		}
+		head = removeDuplicates(head);
+		display(head);
+
+	}
+}
