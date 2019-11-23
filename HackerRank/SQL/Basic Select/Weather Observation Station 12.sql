@@ -1,0 +1,1 @@
+SELECT DISTINCT CITY FROM station WHERE city regexp '[^aeiou]$' AND city regexp '^[^aeiou]';
