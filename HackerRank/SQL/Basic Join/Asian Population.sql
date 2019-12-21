@@ -1,3 +1,3 @@
-select sum(c.population) from city c 
+select c.name from city c 
 inner join country cc on c.CountryCode = cc.Code 
-where cc.continent = 'Asia'
+where cc.continent = 'Africa';
