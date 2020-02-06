@@ -2,7 +2,7 @@ package DataStructures.LikedLists;
 
 import java.util.Scanner;
 
-public class PrinttheElementsofaLinkedList {
+public class PrintTheElementsOfALinkedList {
 
 	static class SinglyLinkedListNode {
 		public int data;

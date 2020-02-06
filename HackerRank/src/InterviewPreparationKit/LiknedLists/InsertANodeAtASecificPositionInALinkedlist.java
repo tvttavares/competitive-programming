@@ -1,11 +1,11 @@
-package DataStructures.LikedLists;
+package InterviewPreparationKit.LiknedLists;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Insertanodeattheheadofalinkedlist {
+public class InsertANodeAtASecificPositionInALinkedlist {
 
 	static class SinglyLinkedListNode {
 		public int data;
@@ -26,6 +26,17 @@ public class Insertanodeattheheadofalinkedlist {
 			this.tail = null;
 		}
 
+		public void insertNode(int nodeData) {
+			SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
+
+			if (this.head == null) {
+				this.head = node;
+			} else {
+				this.tail.next = node;
+			}
+
+			this.tail = node;
+		}
 	}
 
 	public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter)
@@ -41,7 +52,7 @@ public class Insertanodeattheheadofalinkedlist {
 		}
 	}
 
-	// Complete the insertNodeAtHead function below.
+	// Complete the insertNodeAtPosition function below.
 
 	/*
 	 * For your reference:
@@ -49,16 +60,30 @@ public class Insertanodeattheheadofalinkedlist {
 	 * SinglyLinkedListNode { int data; SinglyLinkedListNode next; }
 	 *
 	 */
-	static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
-		SinglyLinkedListNode head = new SinglyLinkedListNode(data);
-
-		if (llist == null) {
-			llist = head;
+	static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+		SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+		SinglyLinkedListNode nodePosition = head;
+		if (head == null) {
+			head = newNode;
+			return head;
+		}
+		if (position == 0) {
+			newNode.next = head;
+			return newNode;
+		}
+		for (int i = 1; i < position; i++) {
+			if (head.next != null) {
+				head = head.next;
+			}
+		}
+		if (head.next != null) {
+			newNode.next = head.next;
+			head.next = newNode;
 		} else {
-			head.next = llist;
+			head.next = newNode;
 		}
 
-		return head;
+		return nodePosition;
 	}
 
 	private static final Scanner scanner = new Scanner(System.in);
@@ -75,12 +100,18 @@ public class Insertanodeattheheadofalinkedlist {
 			int llistItem = scanner.nextInt();
 			scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-			SinglyLinkedListNode llist_head = insertNodeAtHead(llist.head, llistItem);
-
-			llist.head = llist_head;
+			llist.insertNode(llistItem);
 		}
 
-		printSinglyLinkedList(llist.head, "\n", bufferedWriter);
+		int data = scanner.nextInt();
+		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+		int position = scanner.nextInt();
+		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+		SinglyLinkedListNode llist_head = insertNodeAtPosition(llist.head, data, position);
+
+		printSinglyLinkedList(llist_head, " ", bufferedWriter);
 		bufferedWriter.newLine();
 
 		bufferedWriter.close();
