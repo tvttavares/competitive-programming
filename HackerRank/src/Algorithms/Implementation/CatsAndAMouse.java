@@ -23,7 +23,7 @@ public class CatsAndAMouse {
 
 		if(Math.abs(c - a) == Math.abs(c - b)) {
 			System.out.println("Mouse C");
-		} else if (Math.abs(c - a) > Math.abs(c - b)) {
+		} else if (Math.abs(c - a) < Math.abs(c - b)) {
 			System.out.println("Cat A");
 		} else {
 			System.out.println("Cat B");
