@@ -1,8 +1,8 @@
-package Challenges10DaysOfStatistics;
+package Challenges10DaysOfStatistics.Day0;
 
 import java.util.Scanner;
 
-public class Day0WeightedMean {
+public class WeightedMean {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
