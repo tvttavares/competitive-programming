@@ -1,3 +1,4 @@
 rootProject.name = 'competitive-programming'
 include 'hackerrank'
+include 'codesignal'
 
