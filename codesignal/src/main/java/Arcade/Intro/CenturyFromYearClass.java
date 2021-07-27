@@ -1,6 +1,6 @@
 package Arcade.Intro;
 
-public class centuryFromYearClass {
+public class CenturyFromYearClass {
     public static int centuryFromYear(int year) {
 
         int res = year / 100;
