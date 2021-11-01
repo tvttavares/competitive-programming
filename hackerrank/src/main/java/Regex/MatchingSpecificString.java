@@ -7,13 +7,13 @@ import java.util.regex.Pattern;
 public class MatchingSpecificString {
     public static void main(String[] args) {
 
-        Regex_Test tester = new Regex_Test();
+        Regex_Test_Numder_Of_Matches tester = new Regex_Test_Numder_Of_Matches();
         tester.checker("hackerrank");
 
     }
 }
 
-class Regex_Test {
+class Regex_Test_Numder_Of_Matches {
 
     public void checker(String Regex_Pattern) {
 

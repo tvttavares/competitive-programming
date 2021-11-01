@@ -8,21 +8,8 @@ public class MatchingStartEEnd {
 
     public static void main(String[] args) {
 
-        Regex_Test5 tester = new Regex_Test5();
+        Regex_Test tester = new Regex_Test();
         tester.checker("^\\d\\w\\w\\w\\w\\.$"); // Use \\ instead of using \
 
     }
-}
-
-class Regex_Test5 {
-
-    public void checker(String Regex_Pattern) {
-
-        Scanner Input = new Scanner(System.in);
-        String Test_String = Input.nextLine();
-        Pattern p = Pattern.compile(Regex_Pattern);
-        Matcher m = p.matcher(Test_String);
-        System.out.println(m.find());
-    }
-
 }
