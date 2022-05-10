@@ -1,4 +1,4 @@
-package Arcade.Intro;
+package Arcade.Intro.Edge_of_the_Ocean;
 
 public class AlmostIncreasingSequenceClass {
 

@@ -1,4 +1,4 @@
-package Algorithms.Implementation;
+package Arcade.Intro.Smooth_Sailing;
 
 import java.util.ArrayList;
 import java.util.Arrays;

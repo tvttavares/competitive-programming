@@ -1,4 +1,4 @@
-package Arcade.Intro;
+package Arcade.Intro.Smooth_Sailing;
 
 import java.util.ArrayList;
 import java.util.List;

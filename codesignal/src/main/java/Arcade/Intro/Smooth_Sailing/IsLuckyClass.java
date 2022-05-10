@@ -1,4 +1,4 @@
-package Arcade.Intro;
+package Arcade.Intro.Smooth_Sailing;
 
 public class IsLuckyClass {
 

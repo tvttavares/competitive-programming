@@ -1,4 +1,4 @@
-package Arcade.Intro;
+package Arcade.Intro.The_Journey_Begins;
 
 public class CenturyFromYearClass {
     public static int centuryFromYear(int year) {
