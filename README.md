@@ -30,3 +30,6 @@ Competitive programming solutions
 ## [CodeSignal](https://codesignal.com/)
 
 * [Arcade](https://github.com/tvttavares/competitive-programming/tree/master/codesignal/src/main/java/Arcade)
+  * [Intro](https://github.com/tvttavares/competitive-programming/tree/master/codesignal/src/main/java/Arcade/Intro)
+  * [Core](https://github.com/tvttavares/competitive-programming/tree/master/codesignal/src/main/java/Arcade/Core)
+  * [Databases](https://github.com/tvttavares/competitive-programming/tree/master/codesignal/src/main/java/Arcade/Databases)
