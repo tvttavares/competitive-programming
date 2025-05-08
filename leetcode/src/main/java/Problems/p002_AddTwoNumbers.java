@@ -3,7 +3,7 @@ package Problems;
 
 import java.math.BigInteger;
 
-public class AddTwoNumbers {
+public class p002_AddTwoNumbers {
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
@@ -24,8 +24,8 @@ public class AddTwoNumbers {
         sb1.reverse();
         sb2.reverse();
 
-        sb3.append(new BigInteger(sb1.toString()).add(new BigInteger(sb2.toString())))  ;
-         sb3.reverse();
+        sb3.append(new BigInteger(sb1.toString()).add(new BigInteger(sb2.toString())));
+        sb3.reverse();
 
         ListNode head = null;
         ListNode tail = null; // Keep track of the last node

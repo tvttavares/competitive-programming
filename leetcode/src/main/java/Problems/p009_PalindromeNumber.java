@@ -1,6 +1,6 @@
 package Problems;
 
-public class PalindromeNumber {
+public class p009_PalindromeNumber {
 
     static boolean isPalindrome(int x) {
 

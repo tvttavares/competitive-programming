@@ -1,6 +1,6 @@
 package Problems;
 
-public class TwoSum {
+public class p001_TwoSum {
 
     static int[] twoSum(int[] nums, int target) {
         int[] res = new int[2];
